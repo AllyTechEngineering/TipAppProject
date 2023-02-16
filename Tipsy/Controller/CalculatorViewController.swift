@@ -23,7 +23,7 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var stepper: UIStepper!
     
     var tip = 0.10
-    var numberOfPeople = 2
+    var numberOfPeople = 1
     var billTotal = 0.0
     var finalResult = "0.0"
     
@@ -72,6 +72,7 @@ class CalculatorViewController: UIViewController {
             destinationVC.result = finalResult
             destinationVC.tip = Int(tip*100)
             destinationVC.split = numberOfPeople
+            destinationVC.totalTip = Double(billTotal * tip)
         } //if
     } //func
 } //ViewController
